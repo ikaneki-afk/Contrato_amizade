@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 100px; }
+        input { padding: 10px; margin: 10px; }
+        button { padding: 10px; }
+    </style>
+</head>
+<body>
+    <h2>Insira a senha para ver o contrato</h2>
+    <input type="password" id="senha" placeholder="Digite a senha">
+    <button onclick="verificarSenha()">Entrar</button>
+
+    <script>
+        function verificarSenha() {
+            var senhaCorreta = "amizade2025";  // Modifique a senha aqui
+            var senhaDigitada = document.getElementById("senha").value;
+
+            if (senhaDigitada === senhaCorreta) {
+                window.location.href = "contrato.html";
+            } else {
+                alert("Senha incorreta! Tente novamente.");
+            }
+        }
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrato de Amizade</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; padding: 20px; }
+        .contrato { border: 2px solid black; padding: 20px; display: inline-block; text-align: left; max-width: 600px; }
+    </style>
+</head>
+<body>
+    <h1>Contrato de Renovação de Amizade</h1>
+    <div class="contrato">
+        <p>Eu, <strong>[Seu Nome]</strong>, e <strong>[Nome do Amigo]</strong> renovamos nosso compromisso de amizade, prometendo:</p>
+        <ul>
+            <li>Nos apoiar em todos os momentos;</li>
+            <li>Dar risadas mesmo quando não houver graça;</li>
+            <li>Fazer memes um do outro, mas sem exagerar;</li>
+            <li>Estar presente nos momentos difíceis e felizes.</li>
+        </ul>
+        <p>Assinado digitalmente em <span id="data"></span></p>
+        <p><strong>Assinatura:</strong> __________________</p>
+    </div>
+
+    <script>
+        document.getElementById("data").innerText = new Date().toLocaleDateString("pt-BR");
+    </script>
+</body>
+</html>
